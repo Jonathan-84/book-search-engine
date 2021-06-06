@@ -4,17 +4,20 @@
   Reading can be fun, but unless you have a book series you follow, it can be difficult finding your next best read. You can use this app to quickly search and save books you want to read. While this application is quicky and easy to use, it posed the challenge of being the first ful blown MERN app that I created without "training wheels".
 
   ## Table of Contents
+  [Technologies](#Technologies)
+  
  [How To Use](#Usage)
 
   [Images](#Images)
 
-  [Test](#Test)
-
-  [License](#License)
-
   [Contribute](#Contribute)
 
   [Contact Me](#Contact)
+  
+   [License](#License)
+
+  ### Technologies 
+Leveraging HTML, Bootstrap, Node.Js, MongoDB, Express.Js, Google Books API, React
 
   ## Usage 
   Go to https://afternoon-journey-96699.herokuapp.com/. You will need to sign up to use the site. Once you do, type the topic or title that you want in the search bar. Press enter or click the Submit Search button, and your options will appear. After identifying your choice, simply select to Save the Book. That book will now show in your saved book list. 
