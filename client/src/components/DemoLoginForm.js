@@ -9,7 +9,7 @@ import { LOGIN_USER } from '../utils/mutations';
 
 const Demo = () => {
   const [userFormData, setUserFormData] = useState({ email:'demo1@hotmail.com', password:'TryIt' });
-  const [validated] = useState(true);
+  const [validated] = useState(false);
   const [showAlert, setShowAlert] = useState(false);
   const [login, { error }] = useMutation(LOGIN_USER);
 
@@ -57,12 +57,18 @@ const Demo = () => {
 
   return (
     <>
+    <div className='col'>
+    <div className='center-text mx-auto'>
+      <p>Just click Submit to test the site. The demo account credentials are already there.</p>
+    </div>
+    
       <Form noValidate validated={validated} onSubmit={handleFormSubmit}>
         <Alert dismissible onClose={() => setShowAlert(false)} show={showAlert} variant='danger'>
           Something went wrong with your login credentials!
         </Alert>
-        <Form.Group>
-          <Form.Label htmlFor='email'></Form.Label>
+        <div className='row align-self-center'>
+        <Form.Group className=''>
+          <Form.Label htmlFor='email'>Email</Form.Label>
           <Form.Control
             type='text'
             placeholder='Your Email'
@@ -73,8 +79,9 @@ const Demo = () => {
           />
           <Form.Control.Feedback type='invalid'></Form.Control.Feedback>
         </Form.Group>
-
-        <Form.Group>
+        </div>
+        <div className='row align-self-center'>
+        <Form.Group className=''>
           <Form.Label htmlFor='password'>Password</Form.Label>
           <Form.Control
             type='password'
@@ -86,6 +93,7 @@ const Demo = () => {
           />
           <Form.Control.Feedback type='invalid'></Form.Control.Feedback>
         </Form.Group>
+        </div>
         <Button
           disabled={!(userFormData.email && userFormData.password)}
           type='submit'
@@ -93,6 +101,7 @@ const Demo = () => {
           Submit
         </Button>
       </Form>
+      </div>
     </>
   );
 };
