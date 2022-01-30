@@ -8,8 +8,8 @@ import { useMutation } from '@apollo/react-hooks';
 import { LOGIN_USER } from '../utils/mutations';
 
 const Demo = () => {
-  const [userFormData, setUserFormData] = useState({ email: 'Demo', password: 'TryIt123' });
-  const [validated] = useState(false);
+  const [userFormData, setUserFormData] = useState({ email: '', password: '' });
+  const [validated] = useState(true);
   const [showAlert, setShowAlert] = useState(false);
   const [login, { error }] = useMutation(LOGIN_USER);
 
@@ -62,10 +62,10 @@ const Demo = () => {
           Something went wrong with your login credentials!
         </Alert>
         <Form.Group>
-          <Form.Label htmlFor='email'>Email</Form.Label>
+          <Form.Label htmlFor='email'></Form.Label>
           <Form.Control
             type='text'
-            placeholder='Your email'
+            placeholder='Demo'
             name='email'
             onChange={handleInputChange}
             value={userFormData.email}
@@ -78,7 +78,7 @@ const Demo = () => {
           <Form.Label htmlFor='password'>Password</Form.Label>
           <Form.Control
             type='password'
-            placeholder='Your password'
+            placeholder='TryIt123'
             name='password'
             onChange={handleInputChange}
             value={userFormData.password}
