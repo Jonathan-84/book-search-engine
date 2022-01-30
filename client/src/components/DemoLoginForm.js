@@ -57,16 +57,17 @@ const Demo = () => {
 
   return (
     <>
-    <div className='col'>
-    <div className='center-text mx-auto'>
+    <div className='col d-block'>
+   
+      <br></br>
       <p>Just click Submit to test the site. The demo account credentials are already there.</p>
-    </div>
+   
     
       <Form noValidate validated={validated} onSubmit={handleFormSubmit}>
         <Alert dismissible onClose={() => setShowAlert(false)} show={showAlert} variant='danger'>
           Something went wrong with your login credentials!
         </Alert>
-        <div className='row align-self-center'>
+        <div className='row mx-auto'>
         <Form.Group className=''>
           <Form.Label htmlFor='email'>Email</Form.Label>
           <Form.Control
@@ -80,7 +81,7 @@ const Demo = () => {
           <Form.Control.Feedback type='invalid'></Form.Control.Feedback>
         </Form.Group>
         </div>
-        <div className='row align-self-center'>
+        <div className='row mx-auto'>
         <Form.Group className=''>
           <Form.Label htmlFor='password'>Password</Form.Label>
           <Form.Control
