@@ -40,7 +40,7 @@ const Demo = () => {
           }
 
           const token = data.login.token;
-        //   alert(token);
+        //alert();
           Auth.login(token);
         } catch (err) {
           console.error(err);
