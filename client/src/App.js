@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import SearchBooks from './pages/SearchBooks';
+import Demo from './components/DemoLoginForm copy';
 import SavedBooks from './pages/SavedBooks';
 import Navbar from './components/Navbar';
 import { ApolloProvider } from '@apollo/react-hooks';
@@ -26,6 +27,7 @@ function App() {
       <>
         <Navbar />
         <Switch>
+        <Route exact path='/demo' component={Demo} />
           <Route exact path='/' component={SearchBooks} />
           <Route exact path='/saved' component={SavedBooks} />
           <Route component={SearchBooks} />
