@@ -8,7 +8,7 @@ import { useMutation } from '@apollo/react-hooks';
 import { LOGIN_USER } from '../utils/mutations';
 
 const Demo = () => {
-  const [userFormData, setUserFormData] = useState({ email: '', password: '' });
+  const [userFormData, setUserFormData] = useState({ email:'demo1@hotmail.com', password:'TryIt' });
   const [validated] = useState(true);
   const [showAlert, setShowAlert] = useState(false);
   const [login, { error }] = useMutation(LOGIN_USER);
@@ -65,7 +65,7 @@ const Demo = () => {
           <Form.Label htmlFor='email'></Form.Label>
           <Form.Control
             type='text'
-            placeholder='demo1@hotmail.com'
+            placeholder='Your Email'
             name='email'
             onChange={handleInputChange}
             value={userFormData.email}
@@ -78,7 +78,7 @@ const Demo = () => {
           <Form.Label htmlFor='password'>Password</Form.Label>
           <Form.Control
             type='password'
-            placeholder='TryIt'
+            placeholder='Your Password'
             name='password'
             onChange={handleInputChange}
             value={userFormData.password}
