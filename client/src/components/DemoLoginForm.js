@@ -40,7 +40,7 @@ const Demo = () => {
           }
 
           const token = data.login.token;
-           alert(token);
+        //   alert(token);
           Auth.login(token);
         } catch (err) {
           console.error(err);
@@ -71,7 +71,7 @@ const Demo = () => {
             value={userFormData.email}
             required
           />
-          <Form.Control.Feedback type='invalid'>Email is required!</Form.Control.Feedback>
+          <Form.Control.Feedback type='invalid'></Form.Control.Feedback>
         </Form.Group>
 
         <Form.Group>
@@ -84,7 +84,7 @@ const Demo = () => {
             value={userFormData.password}
             required
           />
-          <Form.Control.Feedback type='invalid'>Password is required!</Form.Control.Feedback>
+          <Form.Control.Feedback type='invalid'></Form.Control.Feedback>
         </Form.Group>
         <Button
           disabled={!(userFormData.email && userFormData.password)}
