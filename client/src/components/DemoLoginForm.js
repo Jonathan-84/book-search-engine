@@ -65,7 +65,7 @@ const Demo = () => {
           <Form.Label htmlFor='email'></Form.Label>
           <Form.Control
             type='text'
-            placeholder='Demo'
+            placeholder='demo1@hotmail.com'
             name='email'
             onChange={handleInputChange}
             value={userFormData.email}
@@ -78,7 +78,7 @@ const Demo = () => {
           <Form.Label htmlFor='password'>Password</Form.Label>
           <Form.Control
             type='password'
-            placeholder='TryIt123'
+            placeholder='TryIt'
             name='password'
             onChange={handleInputChange}
             value={userFormData.password}
