@@ -76,6 +76,7 @@ const SearchBooks = () => {
     }
 
     try {
+     // eslint-disable-next-line no-unused-vars
      const{data}= await saveBook({
         variables: { input: {...book} }
       });
