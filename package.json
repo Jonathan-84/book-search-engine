@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "engines": {
-    "node": "18.x"
-  },
+		"node": "16.x",
+		"npm": "8.x"
+	},
   "main": "server/server.js",
   "scripts": {
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
