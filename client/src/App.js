@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import SearchBooks from './pages/SearchBooks';
 import Demo from './components/DemoLoginForm';
 import SavedBooks from './pages/SavedBooks';
@@ -26,12 +26,12 @@ function App() {
     <Router>
       <>
         <Navbar />
-        <Routes>
+        <Switch>
         <Route exact path='/🛸' component={Demo} />
           <Route exact path='/' component={SearchBooks} />
           <Route exact path='/saved' component={SavedBooks} />
           <Route component={SearchBooks} />
-        </Routes>
+        </Switch>
       </>
     </Router>
     </ApolloProvider>

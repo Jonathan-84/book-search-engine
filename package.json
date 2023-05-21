@@ -2,11 +2,11 @@
   "name": "googlebooks-app",
   "version": "1.0.0",
   "description": "",
+  "main": "server/server.js",
   "engines": {
 		"node": "16.x",
 		"npm": "8.x"
 	},
-  "main": "server/server.js",
   "scripts": {
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
     "start:prod": "cd server && npm start",
